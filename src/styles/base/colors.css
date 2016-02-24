@@ -1,3 +1,9 @@
-:root {
+:root
+{
   --heading-color: #FFFFFF;
+}
+
+.example
+{
+    background-color: var(--heading-color);
 }
