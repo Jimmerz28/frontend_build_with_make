@@ -1,0 +1,17 @@
+{
+  "name": "makefile_seed",
+  "version": "0.0.1",
+  "description": "An attempt at using a makefile to build a frontend project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "make"
+  ],
+  "author": "James Daniel Holby <jamesdholby@gmail.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "postcss-cli": "^2.5.1"
+  }
+}
