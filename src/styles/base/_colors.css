@@ -7,8 +7,3 @@
     --so-much-y-g: #F3FFBD;
     --jeff-hardy: #FF1654;
 }
-
-.example
-{
-    background-color: var(--jeff-hardy);
-}
