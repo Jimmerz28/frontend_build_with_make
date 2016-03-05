@@ -8,4 +8,6 @@ $(styles_target): $(styles_src)
 	mkdir -p $(dir $@)
 	postcss \
 	--use postcss-cssnext \
+	--use postcss-discard-comments \
+	--use postcss-discard-empty \
 	--output $@ $<
