@@ -35,3 +35,5 @@ client: clean $(styles_target) $(html_target) serve
 
 clean:
 		rm -Rf dist
+serve:
+	http-server ./dist
