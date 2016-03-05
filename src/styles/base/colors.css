@@ -1,9 +1,14 @@
 :root
 {
-  --heading-color: #FFFFFF;
+    /* Example colors taken from http://www.colourlovers.com/palette/3792630/Summer_Sunrise */
+    --sea-melancholy: #247BA0;
+    --ocean-waves: #70C1B3;
+    --seafoam: #B2DBBF;
+    --so-much-y-g: #F3FFBD;
+    --jeff-hardy: #FF1654;
 }
 
 .example
 {
-    background-color: var(--heading-color);
+    background-color: var(--jeff-hardy);
 }
