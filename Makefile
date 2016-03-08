@@ -2,8 +2,8 @@ PATH  := node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
 # CSS Rules
-styles_src = $(shell find src/styles -name "*.css")
-styles_target = $(styles_src:%.css=dist/css/brains.css)
+styles_src := src/styles/brains.css
+styles_target := dist/css/brains.css
 
 # HTML
 html_src = src/index.html
@@ -19,21 +19,21 @@ $(styles_target): $(styles_src)
 	--local-plugins \
 	--no-map.inline \
 	--use postcss-partial-import \
+	--use postcss-cssnext \
 	--use postcss-discard-comments \
 	--use postcss-discard-empty \
-	--use postcss-cssnext \
 	--output $@ $<
 
 $(html_target): $(html_src)
 	mkdir -p $(dir $@)
 	cp $(html_src) $(html_target)
 
+styles: $(styles_target)
 
 copy: $(html_target)
 
-client: clean $(styles_target) $(html_target) serve
-
 clean:
-		rm -Rf dist
+	rm -Rf dist
+
 serve:
 	http-server ./dist
